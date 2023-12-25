@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3427e4a4a038fed408f83ecd4a8ab01a, type: 3}
+  m_Name: Health
+  m_EditorClassIdentifier: 
+  powerup: {fileID: 3064683934632253125, guid: 5bfe7fab00245d9478f33a60ea777234, type: 3}
+  powerup_sprit: {fileID: 21300000, guid: c7cefe5403b7dc7468244ced78ab0d84, type: 3}
+  speed: 4
+  powerupName: Health
+  moveDirection: {x: 0, y: -1, z: 0}

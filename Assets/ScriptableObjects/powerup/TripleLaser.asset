@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3427e4a4a038fed408f83ecd4a8ab01a, type: 3}
+  m_Name: TripleLaser
+  m_EditorClassIdentifier: 
+  powerup: {fileID: 1657389745152181268, guid: 527c8190dc4a78540a43532a50338e6b, type: 3}
+  powerup_sprit: {fileID: 21300000, guid: 934f3dc0a1bac17409c9f60e810f3682, type: 3}
+  speed: 12
+  powerupName: TripleLaser
+  moveDirection: {x: 0, y: 1, z: 0}
