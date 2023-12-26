@@ -271,10 +271,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451374029643819713}
-  - component: {fileID: 5033533389786100605}
   - component: {fileID: 1348660947276330645}
+  - component: {fileID: 4017064463099515155}
+  - component: {fileID: 1704490905169088983}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: EnemyLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,26 +297,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5033533389786100605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6828672053774866648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38dbea5655e2611439594b1cdb53d560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerupScriptable: {fileID: 11400000, guid: 5d719b9f22ee9af49b447cf17a2845da, type: 2}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  _playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  LaserMoveDirection: 0
 --- !u!65 &1348660947276330645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -331,9 +312,49 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1343419, y: 0.6680559, z: 1}
   m_Center: {x: 0.0032543838, y: -0.003254354, z: 0}
+--- !u!114 &4017064463099515155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828672053774866648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0d72e9107b9644897788fc8e0c0a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupScriptable: {fileID: 11400000, guid: a9af447dbc1d6554e893fda91ce3704b, type: 2}
+--- !u!54 &1704490905169088983
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828672053774866648}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

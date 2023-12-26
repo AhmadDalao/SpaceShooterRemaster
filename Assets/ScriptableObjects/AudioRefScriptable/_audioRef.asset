@@ -15,3 +15,5 @@ MonoBehaviour:
   _laser: {fileID: 8300000, guid: 75676f361bdfeaf41a46623e95df3dbc, type: 3}
   _explosion: {fileID: 8300000, guid: a885c043fab7e46438bba03ba9dab6bc, type: 3}
   _powerup: {fileID: 8300000, guid: 5ee343246919d2b4bba63ae629e95494, type: 3}
+  _playerDamaged: {fileID: 8300000, guid: de59a3f14c5f3e34586376afeeb4fabb, type: 3}
+  _enemyLaser: {fileID: 8300000, guid: 8b8d20428bbaad7478832122def79e44, type: 3}

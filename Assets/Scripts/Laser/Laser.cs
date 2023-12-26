@@ -7,7 +7,6 @@ using static UnityEngine.EventSystems.EventTrigger;
 public class Laser : MonoBehaviour {
 
     [SerializeField] private PowerupScriptable powerupScriptable;
-
     [SerializeField] private LayerMask _layerMask;
 
     public PowerupScriptable GetPowerupScriptable() {
@@ -17,9 +16,10 @@ public class Laser : MonoBehaviour {
 
     public enum moveDirection {
         up,
-        down
     }
-    // private moveDirection userInputMoveDirection;
+
+
+    public moveDirection LaserMoveDirection;
 
 
     private float maxDistance = 1f;
@@ -27,19 +27,24 @@ public class Laser : MonoBehaviour {
 
     private void Update() {
 
-        transform.position += powerupScriptable.GetMoveDirection() * powerupScriptable.GetSpeed() * Time.deltaTime;
+        switch (LaserMoveDirection) {
+            case moveDirection.up:
+                transform.position += Vector3.up * powerupScriptable.GetSpeed() * Time.deltaTime;
 
-        HandleInteraction();
+                HandleInteraction();
 
-        if (transform.position.y >= 6f) {
-            if (this.gameObject.transform.parent != null) {
-                Destroy(gameObject);
-                Destroy(transform.parent.gameObject);
-            } else {
-                Destroy(gameObject);
-            }
+                if (transform.position.y >= 6f) {
+                    if (this.gameObject.transform.parent != null) {
+                        Destroy(gameObject);
+                        Destroy(transform.parent.gameObject);
+                    } else {
+                        Destroy(gameObject);
+                    }
+                }
+
+                break;
+
         }
-
     }
 
 
@@ -62,7 +67,6 @@ public class Laser : MonoBehaviour {
         }
 
     }
-
 
     public void DestroySelf() {
         Destroy(this.gameObject);

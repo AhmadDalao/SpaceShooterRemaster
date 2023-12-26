@@ -56,6 +56,15 @@ public class MusicManager : MonoBehaviour {
         PlaySound(_audioRef.GetPowerupSound(), position, volume);
     }
 
+    public void PlayPlayerDamageSound(Vector3 position, float volume = 1f) {
+        PlaySound(_audioRef.GetPlayerDamagedSound(), position, volume);
+
+    }
+
+    public void PlayEnemyLaserSound(Vector3 position, float volume = 1f) {
+        PlaySound(_audioRef.GetEnemyLaserSound(), position, volume);
+    }
+
 
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
         AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplayer * _volume);

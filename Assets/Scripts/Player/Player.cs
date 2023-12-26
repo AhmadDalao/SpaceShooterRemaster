@@ -292,6 +292,9 @@ public class Player : MonoBehaviour {
     }
 
 
+    public Vector3 GetPlayerPosition() {
+        return transform.position;
+    }
 
 
 }

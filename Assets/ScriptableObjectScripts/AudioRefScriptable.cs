@@ -10,7 +10,8 @@ public class AudioRefScriptable : ScriptableObject {
     [SerializeField] private AudioClip _laser;
     [SerializeField] private AudioClip _explosion;
     [SerializeField] private AudioClip _powerup;
-
+    [SerializeField] private AudioClip _playerDamaged;
+    [SerializeField] private AudioClip _enemyLaser;
 
 
     public AudioClip GetLaserSound() {
@@ -25,4 +26,14 @@ public class AudioRefScriptable : ScriptableObject {
         return _powerup;
     }
 
+
+    public AudioClip GetPlayerDamagedSound() {
+        return _playerDamaged;
+    }
+
+
+    public AudioClip GetEnemyLaserSound() {
+
+        return _enemyLaser;
+    }
 }
