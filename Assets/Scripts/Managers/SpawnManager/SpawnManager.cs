@@ -25,15 +25,15 @@ public class SpawnManager : MonoBehaviour {
 
     private float spawnTime;
 
-    private float spawnTimerMax = 4f;
+    private float spawnTimerMax = 1.5f;
 
-    private int spawnCountLimiter = 4;
+    private int spawnCountLimiter = 8;
 
     private float yOffSet = 6.5f;
 
     private float spawnTimePowerup;
 
-    private float spawnTimerMaxPowerup = 6f;
+    private float spawnTimerMaxPowerup = 3f;
 
     private int spawnCountLimiterPowerup = 1;
 

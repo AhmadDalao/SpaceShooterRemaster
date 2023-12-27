@@ -1,31 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IEnemy {
-
-
 
     private float yOffSet = 6.5f;
 
     [SerializeField] private GameObject _explosionParticle;
     [SerializeField] private PowerupScriptable _enemyLaserPrefab;
-    [SerializeField] private Transform _laserSpawnLocation;
-
-    private float _laserYOffSet = -1.5f;
+    private Transform _laserSpawnLocation;
 
     private float _laserSoundVolume = 1f;
 
     private float _enemyLaserTimer;
-    private float _enemyTimerMax = 5f;
+    private float _enemyTimerMax = 1f;
 
-    private float _speed = 2.5f;
+
+    private void Start() {
+        _laserSpawnLocation = GameObject.FindObjectOfType<EnemySpawnLocation>().transform;
+    }
 
     private void Update() {
 
-        transform.position += Vector3.down * _speed * Time.deltaTime;
+        //    transform.position += Vector3.down * _speed * Time.deltaTime;
 
 
         _enemyLaserTimer -= Time.deltaTime;
@@ -35,8 +33,8 @@ public class Enemy : MonoBehaviour, IEnemy {
 
             // fire the laser
 
-            Instantiate(_enemyLaserPrefab.GetPowerUp(), new Vector3(transform.position.x, transform.position.y - _laserYOffSet, 0f), Quaternion.identity);
-            //    enemyLaserTransform.SetParent(_laserSpawnLocation);
+            Transform enemyLaserTransform = Instantiate(_enemyLaserPrefab.GetPowerUp(), transform.position, Quaternion.identity);
+            enemyLaserTransform.SetParent(_laserSpawnLocation);
             MusicManager.Instance.PlayEnemyLaserSound(transform.position, _laserSoundVolume);
 
         }
